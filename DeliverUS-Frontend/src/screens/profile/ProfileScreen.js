@@ -154,7 +154,7 @@ export default function ProfileScreen({ navigation, route }) {
                   {backendErrors &&
                     backendErrors.map((error, index) => <TextError key={index}>{error.param}-{error.msg}</TextError>)
                   }
-                  <Pressable  /* TODO: Implementa el reenvio a la pantalla pertinente */  
+                  <Pressable  onPress={() => navigation.navigate('AddressScreen', { })}
                     style={({ pressed }) => [
                         {
                           backgroundColor: pressed
